@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/torressam333/css_style_library/issues"
   },
-  "homepage": "https://github.com/torressam333/css_style_library#readme"
+  "homepage": "https://github.com/torressam333/css_style_library#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0"
+  }
 }
