@@ -1,0 +1,19 @@
+{
+  "name": "sass_style_library",
+  "version": "1.0.0",
+  "description": "A css library built with sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torressam333/css_style_library.git"
+  },
+  "author": "Sammy T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/torressam333/css_style_library/issues"
+  },
+  "homepage": "https://github.com/torressam333/css_style_library#readme"
+}
