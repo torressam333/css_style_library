@@ -2,8 +2,10 @@
   "name": "sass_style_library",
   "version": "1.0.0",
   "description": "A css library built with sass",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,7 @@
   "homepage": "https://github.com/torressam333/css_style_library#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.53.0"
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.2"
   }
 }

@@ -10,7 +10,7 @@ const compileStyles = () => {
 // Re-compile when styles change
 const watchSass = () => {
   // File to watch with delay to ensure performant
-  watch(['styles.scss'], { delay: 200 }, compileStyles);
+  watch(['styles.scss'], compileStyles);
 };
 
 exports.default = series(compileStyles, watchSass);

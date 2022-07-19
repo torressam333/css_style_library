@@ -31,8 +31,13 @@ img {
   max-width: 100%;
 }
 
+// Base theme colors
+$primary: #3973bb;
+$seconday: #3fd865;
+$error: #d8443f;
+$info: #43c1b2;
+$warning: #d8db2f;
+
 h1 {
-  a {
-    text-decoration: none;
-  }
+  color: $info;
 }
