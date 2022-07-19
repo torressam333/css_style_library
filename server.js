@@ -1,21 +1,38 @@
 let http = require('http');
 let fs = require('fs');
 
-let handleRequest = (_, response) => {
-  response.writeHead(200, {
-    'Content-Type': 'text/html',
-  });
-  fs.readFile('./index.html', null, function (error, payload) {
-    if (error) {
-      response.writeHead(404);
-      respone.write(
-        'Oooohh noooo, where the heck did I put that index.html file'
-      );
-    } else {
-      response.write(payload);
-    }
-    response.end();
-  });
+const server = (request, response) => {
+  let filePath = `.${request.url}`;
+  //this is either '/' or '/css/styles.css'...will need to update for images later;
+  console.log(request.url);
+
+  if (request.url === '/' || request.url === '/index.html') {
+    filePath = './index.html';
+
+    fs.readFile(filePath, null, (error, payload) => {
+      response.setHeader('Content-Type', 'text/html');
+
+      if (error) {
+        response.writeHead(404);
+        respone.write('Oooohh noooo, where the heck did I put that file');
+      }
+
+      response.end(payload, 'utf-8');
+    });
+  } else if (request.url === '/css/styles.css') {
+    filePath = './css/styles.css';
+
+    fs.readFile(filePath, null, (error, payload) => {
+      response.setHeader('Content-Type', 'text/css');
+
+      if (error) {
+        response.writeHead(404);
+        respone.write('Oooohh noooo, where the heck did I put that file');
+      }
+
+      response.end(payload, 'utf-8');
+    });
+  }
 };
 
-http.createServer(handleRequest).listen(8008);
+http.createServer(server).listen(8008);
