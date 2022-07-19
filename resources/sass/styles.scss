@@ -1,3 +1,5 @@
+@use '_globalVariables';
+
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -11,7 +13,7 @@
 }
 
 body {
-  font-family: lato, sans-serif;
+  font-family: globalVariables.$font-text;
 }
 
 // Override specific elements from above unset-ting
@@ -31,13 +33,6 @@ img {
   max-width: 100%;
 }
 
-// Base theme colors
-$primary: #3973bb;
-$seconday: #3fd865;
-$error: #d8443f;
-$info: #43c1b2;
-$warning: #d8db2f;
-
 h1 {
-  color: $info;
+  color: globalVariables.$warning;
 }
