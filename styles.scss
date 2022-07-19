@@ -12,6 +12,10 @@
   all: unset;
 }
 
+body {
+  font-family: lato, sans-serif;
+}
+
 // Override specific elements from above unset-ting
 div {
   display: revert; /* = block */

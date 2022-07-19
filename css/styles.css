@@ -8,6 +8,10 @@
   all: unset;
 }
 
+body {
+  font-family: lato, sans-serif;
+}
+
 div {
   display: revert; /* = block */
 }
